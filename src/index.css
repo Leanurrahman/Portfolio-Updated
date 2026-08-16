@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-space: "Space Grotesk", sans-serif;
+
+  --color-editorial-dark: var(--bg-primary);
+  --color-editorial-light: var(--text-primary);
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-card: var(--bg-card);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-accent: var(--brand-orange);
+  --color-border-primary: var(--border-primary);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-orange-hover: var(--brand-orange-hover);
+  --color-brand-glow: var(--brand-glow);
+  --color-brand-soft-bg: var(--brand-soft-bg);
+
+  /* New premium purple/neon properties */
+  --color-brand-purple: var(--primary-accent);
+  --color-brand-purple-hover: var(--neon-purple);
+  --color-neon-purple: var(--neon-purple);
+  --color-deep-violet: var(--deep-violet);
+  --color-soft-lavender: var(--soft-lavender);
+  --color-brand-glow-purple: var(--glow-color);
+  --color-real-orange: var(--real-orange);
+}
+
+/* Define the theme variables on root with dynamic presets */
+:root,
+[data-theme-preset="cosmic-orange"] {
+  --background: #050505;
+  --background-soft: #0c0c0c;
+  --surface: #111111;
+  --surface-muted: #1a1a1a;
+  --text-primary: #FFFFFF;
+  --text-secondary: #E5E5E5;
+  --text-muted: #888888;
+  --border: rgba(255, 106, 0, 0.15);
+  --accent: #FF6A00;
+  --accent-hover: #EA580C;
+  --accent-soft: rgba(255, 106, 0, 0.08);
+  --glow: rgba(255, 106, 0, 0.25);
+  --orbit-color: rgba(255, 106, 0, 0.2);
+  --particle-primary: #FF6A00;
+  --particle-secondary: #FFFFFF;
+
+  /* Mappings to legacy variables */
+  --bg-primary: var(--background);
+  --bg-secondary: var(--background-soft);
+  --bg-card: var(--surface);
+  --border-primary: var(--border);
+  --brand-orange: var(--accent);
+  --brand-orange-hover: var(--accent-hover);
+  --brand-glow: var(--glow);
+  --brand-soft-bg: var(--accent-soft);
+
+  --primary-accent: var(--accent);
+  --neon-purple: #FF8533;
+  --deep-violet: #CC5500;
+  --soft-lavender: #FFB380;
+  --glow-color: rgba(255, 106, 0, 0.35);
+  --real-orange: #FF6A00;
+}
+
+[data-theme-preset="neon-purple"] {
+  --background: #090014;
+  --background-soft: #120022;
+  --surface: #1a0830;
+  --surface-muted: #240f42;
+  --text-primary: #FFFFFF;
+  --text-secondary: #C9B8FF;
+  --text-muted: #9B8AB8;
+  --border: rgba(168, 85, 247, 0.15);
+  --accent: #8B5CF6;
+  --accent-hover: #A855F7;
+  --accent-soft: rgba(139, 92, 246, 0.1);
+  --glow: rgba(168, 85, 247, 0.25);
+  --orbit-color: rgba(168, 85, 247, 0.2);
+  --particle-primary: #A855F7;
+  --particle-secondary: #818CF8;
+
+  /* Mappings to legacy variables */
+  --bg-primary: var(--background);
+  --bg-secondary: var(--background-soft);
+  --bg-card: var(--surface);
+  --border-primary: var(--border);
+  --brand-orange: var(--accent);
+  --brand-orange-hover: var(--accent-hover);
+  --brand-glow: var(--glow);
+  --brand-soft-bg: var(--accent-soft);
+
+  --primary-accent: var(--accent);
+  --neon-purple: #A855F7;
+  --deep-violet: #6D28D9;
+  --soft-lavender: #C084FC;
+  --glow-color: rgba(168, 85, 247, 0.35);
+  --real-orange: #FF6A00;
+}
+
+[data-theme-preset="clean-light"] {
+  --background: #FFFFFF;
+  --background-soft: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-muted: #F3F4F6;
+  --text-primary: #111111;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+  --border: rgba(0, 0, 0, 0.1);
+  --accent: #FF6A00;
+  --accent-hover: #EA580C;
+  --accent-soft: rgba(255, 106, 0, 0.08);
+  --glow: rgba(255, 106, 0, 0.12);
+  --orbit-color: rgba(0, 0, 0, 0.05);
+  --particle-primary: #FF6A00;
+  --particle-secondary: #111111;
+
+  /* Mappings to legacy variables */
+  --bg-primary: var(--background);
+  --bg-secondary: var(--background-soft);
+  --bg-card: var(--surface);
+  --border-primary: var(--border);
+  --brand-orange: var(--accent);
+  --brand-orange-hover: var(--accent-hover);
+  --brand-glow: var(--glow);
+  --brand-soft-bg: var(--accent-soft);
+
+  --primary-accent: #7C3AED;
+  --neon-purple: #9333EA;
+  --deep-violet: #5B21B6;
+  --soft-lavender: #C084FC;
+  --glow-color: rgba(147, 51, 234, 0.15);
+  --real-orange: #FF6A00;
+}
+
+/* Global transitions for visual styles */
+body, 
+section, 
+header, 
+footer, 
+button, 
+p, 
+span, 
+h1, 
+h2, 
+h3, 
+h4, 
+a, 
+input, 
+textarea, 
+select {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow, text-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+
+/* Custom Editorial Aesthetic CSS Overrides */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* GTA VI Experience Theme Overrides */
+[data-experience="gta6"] {
+  --background: #0d0118;
+  --background-soft: #16032a;
+  --surface: rgba(30, 8, 52, 0.45);
+  --surface-muted: rgba(50, 15, 82, 0.6);
+  --text-primary: #ffffff;
+  --text-secondary: #ffd5fb;
+  --text-muted: #cdadd9;
+  --border: rgba(254, 46, 166, 0.35);
+  --accent: #ff007f;
+  --accent-hover: #ff3399;
+  --accent-soft: rgba(254, 46, 166, 0.12);
+  --glow: rgba(254, 46, 166, 0.4);
+  
+  --bg-primary: var(--background);
+  --bg-secondary: var(--background-soft);
+  --bg-card: var(--surface);
+  --border-primary: var(--border);
+  --brand-orange: var(--accent);
+  --brand-orange-hover: var(--accent-hover);
+  --brand-glow: var(--glow);
+  --brand-soft-bg: var(--accent-soft);
+
+  --primary-accent: #ff007f;
+  --neon-purple: #ff5e00;
+  --deep-violet: #8a004c;
+  --soft-lavender: #ffb8e4;
+  --glow-color: rgba(254, 46, 166, 0.45);
+  --real-orange: #ffaa00;
+}
+
+/* Add custom neon animation and VHS grain style helper if needed for GTA VI */
+[data-experience="gta6"] .neon-text-glow {
+  text-shadow: 0 0 10px rgba(254, 46, 166, 0.8), 0 0 20px rgba(254, 46, 166, 0.4);
+}
+
+[data-experience="gta6"] .neon-border-glow {
+  box-shadow: 0 0 15px rgba(254, 46, 166, 0.3), inset 0 0 15px rgba(254, 46, 166, 0.1);
+}
+
+/* Apple Glass Experience Theme Overrides */
+[data-experience="apple"] {
+  --background: #F8FAFC;
+  --background-soft: #FFFFFF;
+  --surface: rgba(255, 255, 255, 0.68);
+  --surface-muted: rgba(255, 255, 255, 0.45);
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --border: rgba(15, 23, 42, 0.10);
+  --accent: #007AFF;
+  --accent-hover: #0056b3;
+  --accent-soft: rgba(0, 122, 255, 0.08);
+  --glow: rgba(90, 200, 250, 0.25);
+  
+  --bg-primary: var(--background);
+  --bg-secondary: var(--background-soft);
+  --bg-card: var(--surface);
+  --border-primary: var(--border);
+  --brand-orange: var(--accent);
+  --brand-orange-hover: var(--accent-hover);
+  --brand-glow: var(--glow);
+  --brand-soft-bg: var(--accent-soft);
+
+  --accent-blue: #007AFF;
+  --accent-cyan: #5AC8FA;
+  --soft-glow: rgba(90, 200, 250, 0.25);
+  --micro-orange: #FF6A00;
+}
+
+/* Neon Gaming Experience Theme Overrides */
+[data-experience="neon-gaming"] {
+  --background: #000000;
+  --background-soft: #08080c;
+  --surface: rgba(20, 20, 28, 0.6);
+  --surface-muted: rgba(30, 30, 42, 0.8);
+  --text-primary: #ffffff;
+  --text-secondary: #c0c0d0;
+  --text-muted: #808095;
+  --border: rgba(0, 255, 135, 0.2);
+  --accent: #00ff87;
+  --accent-hover: #1cd8d2;
+  --accent-soft: rgba(0, 255, 135, 0.08);
+  --glow: rgba(0, 255, 135, 0.25);
+
+  --bg-primary: var(--background);
+  --bg-secondary: var(--background-soft);
+  --bg-card: var(--surface);
+  --border-primary: var(--border);
+  --brand-orange: var(--accent);
+  --brand-orange-hover: var(--accent-hover);
+  --brand-glow: var(--glow);
+  --brand-soft-bg: var(--accent-soft);
+
+  --primary-accent: #1cd8d2;
+  --neon-purple: #9b51e0;
+  --glow-color: rgba(0, 255, 135, 0.3);
+}
+
+/* Glass reflection Sweep effect */
+[data-experience="apple"] .glass-reflection {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-experience="apple"] .glass-reflection::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+
+[data-experience="apple"] .glass-reflection:hover::after {
+  left: 130%;
+}
+
+/* Mobile Performance Optimization Rules */
+@media (max-width: 768px) {
+  /* Reduce hardware-heavy backdrop filters to simple, lightweight filters on mobile */
+  .backdrop-blur-xl, 
+  .backdrop-blur-2xl, 
+  .backdrop-blur-3xl,
+  [class*="backdrop-blur-"] {
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+  }
+}
+
+
