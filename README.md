@@ -1,20 +1,21 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Portfolio Project
 
-# Run and deploy your AI Studio app
+This repository contains a portfolio website with a custom experience system, admin panel, Firebase integration, and an email notification backend.
 
-This contains everything you need to run your app locally.
+## Local setup
 
-View your app in AI Studio: https://ai.studio/apps/997d9155-8def-4249-a295-16e94fb09110
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Create a local environment file using the example template:
+   `copy .env.example .env`
+3. Fill in your own Firebase and email values in `.env`
+4. Start the app:
    `npm run dev`
+
+## Notes
+
+- Keep secrets in your local `.env` file only.
+- Do not commit API keys or private credentials to Git.
+- For project details, see [PROJECT-SETUP.md](PROJECT-SETUP.md).
